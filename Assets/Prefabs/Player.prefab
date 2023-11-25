@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  rg: {fileID: 0}
+  playerOrientation: {x: 0, y: 0, z: 0, w: 0}
   playerID: 0
   spawnPosition: {x: 0, y: 0}
 --- !u!114 &237368295410885443
@@ -253,7 +255,7 @@ MonoBehaviour:
     m_ActionId: 96a28b9c-5a45-4000-891e-b18e752e66aa
     m_ActionName: Player/AttackElement[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -271,3 +273,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   utilElementGO: {fileID: 0}
   attackElementGO: {fileID: 0}
+  comboElementGO: {fileID: 0}

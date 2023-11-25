@@ -231,6 +231,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "LobbyInput",
+            "id": "fe3d8f9d-a9e4-4692-9a74-a3705ae22ced",
+            "actions": [
+                {
+                    "name": "JoinGame",
+                    "type": "Button",
+                    "id": "582e24a6-7d83-4635-a433-9145379c80c4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7872855c-4783-4a06-8732-f10ae6fc4a09",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "JoinGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
