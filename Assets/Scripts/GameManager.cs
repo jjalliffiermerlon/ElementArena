@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateGameState(GameState.MainMenu);
-        SceneManager.LoadScene(MainMenu); //edit to actual scene name
+        //SceneManager.LoadScene(MainMenu); //edit to actual scene name
     }
 
     public GameState state;
