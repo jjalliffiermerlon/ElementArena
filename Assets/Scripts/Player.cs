@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     // gère la mort du joueur
     public void Die()
     {
-        
+        Destroy(gameObject);
     }
     
     void Update()
