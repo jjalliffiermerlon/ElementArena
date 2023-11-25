@@ -3,6 +3,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Variable modifiable sur Unity
+    public bool CanDash = true;
+    public bool IsDashing;
     [SerializeField] private float speed = 10f;
     
     public Rigidbody2D rg;
@@ -33,6 +35,10 @@ public class Player : MonoBehaviour
     // Déplace le joueur
     public void Move(Vector2 movement)
     {
+        if (IsDashing) // si on dash, on bouge pas
+        {
+            return;
+        }
         rg.velocity = movement * speed * Time.fixedDeltaTime;
         if (movement != Vector2.zero)
         {
@@ -68,16 +74,21 @@ public class Player : MonoBehaviour
     //lance l'élément offensif
     public void AttackElement()
     {
-        if (elementManager.GetAttackElement() != null)
+        if (IsDashing)
         {
-            elementManager.UseAttackElement();
+            return;
         }
+        elementManager.UseAttackElement();
     }
     
     // lance l'élément utilitaire
     public void UtilElement()
     {
-        
+        if (IsDashing)
+        {
+            return;
+        }
+        elementManager.UseUtileElement();
     }
     
     // gère la mort du joueur
