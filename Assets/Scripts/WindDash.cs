@@ -6,10 +6,10 @@ public class WindDash : MonoBehaviour, UtilElement
 {
     public bool CanDash = true;
     public bool IsDashing;
-    [SerializeField] private float DashTime = 0.2f;
+    [SerializeField] private float DashTime = 1f;
     [SerializeField] private float DashForce = 2f;
 
-    [SerializeField] private float DashCooldown = 0.5f;
+    [SerializeField] private float DashCooldown = 1.5f;
     [SerializeField] private int countUseMax = 3;
 
     private Player playerScript;

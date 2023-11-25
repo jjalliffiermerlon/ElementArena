@@ -68,16 +68,13 @@ public class Player : MonoBehaviour
     //lance l'élément offensif
     public void AttackElement()
     {
-        if (elementManager.GetAttackElement() != null)
-        {
-            elementManager.UseAttackElement();
-        }
+        elementManager.UseAttackElement();
     }
     
     // lance l'élément utilitaire
     public void UtilElement()
     {
-        
+        elementManager.UseUtileElement();
     }
     
     // gère la mort du joueur

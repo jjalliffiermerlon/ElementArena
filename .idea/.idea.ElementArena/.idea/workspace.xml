@@ -14,7 +14,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ElementFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ElementFire.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ElementFire.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ElementFire.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ElementWind.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ElementWind.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ElementWind.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ElementWind.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballElement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballElement.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballProjectile.prefab" afterDir="false" />
@@ -66,6 +65,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSpawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions.meta" afterDir="false" />
@@ -84,8 +84,23 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldLimit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldLimit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldLimit.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldLimit.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Panda.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Panda.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Panda/panda_full_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Panda/panda_full_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Panda/panda_full_face.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Panda/panda_full_face.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Panda/panda_full_side.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Panda/panda_full_side.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/cat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cat/cat_full_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/cat/cat_full_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cat/cat_full_face.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/cat/cat_full_face.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cat/cat_full_side.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/cat/cat_full_side.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/fire.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/fire.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/frog_full_face.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/frog_full_face.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/frog.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/frog.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/frog/frog_full_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/frog/frog_full_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/frog/frog_full_face.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/frog/frog_full_face.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/frog/frog_full_side.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/frog/frog_full_side.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/rabbit.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/rabbit.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_face.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_face.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_side.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_side.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
@@ -176,7 +191,9 @@
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
@@ -295,7 +312,7 @@
       <workItem from="1700930828823" duration="8103000" />
       <workItem from="1700942094699" duration="17000" />
       <workItem from="1700942234858" duration="70000" />
-      <workItem from="1700942481478" duration="2334000" />
+      <workItem from="1700942481478" duration="3699000" />
     </task>
     <servers />
   </component>

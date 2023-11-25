@@ -18,17 +18,29 @@ public class ElementManager : MonoBehaviour
 
     //Use the element and reduce 1 use (Remove the element if useleft = 0)
     public void UseUtileElement()
-    {  
-        utilElement.Use();
-        utilElementUseLeft -= 1;
-        if (utilElementUseLeft <= 0) { RemoveUtilElement(); }
+    {
+        if (utilElement != null)
+        {
+            utilElement.Use();
+            utilElementUseLeft -= 1;
+            if (utilElementUseLeft <= 0)
+            {
+                RemoveUtilElement();
+            }
+        }
     }
 
     public void UseAttackElement()
     {
-        attackElement.Use();
-        attackElementUseLeft -= 1;
-        if(attackElementUseLeft <= 0) { RemoveAttackElement(); }
+        if (utilElement != null)
+        {
+            attackElement.Use();
+            attackElementUseLeft -= 1;
+            if (attackElementUseLeft <= 0)
+            {
+                RemoveAttackElement();
+            }
+        }
     }
 
     public void UseComboElement()
