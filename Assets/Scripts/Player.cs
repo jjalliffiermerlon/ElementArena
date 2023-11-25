@@ -17,7 +17,10 @@ public class Player : MonoBehaviour
     public void Move(Vector2 movement)
     {
         rg.velocity = movement * speed * Time.fixedDeltaTime;
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, movement);
+        if (movement != Vector2.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, movement);
+        }
     }
     // lance le Coup de poing
     void Punch()
