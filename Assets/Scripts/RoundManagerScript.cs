@@ -7,6 +7,7 @@ public class RoundManagerScript : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform[] spawnPoints;
     public int numberOfPlayer = 2;
+    [SerializeField] private GameObject scoreScreen;
 
     void Start()
     {
@@ -16,5 +17,18 @@ public class RoundManagerScript : MonoBehaviour
             spawnedPlayer = Instantiate(playerPrefab);
             spawnedPlayer.transform.position = spawnPoints[i].position;
         }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            roundFinished();
+        }
+    }
+
+    private void roundFinished()
+    {
+        scoreScreen.SetActive(true);
     }
 }
