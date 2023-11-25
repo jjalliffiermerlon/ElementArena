@@ -26,22 +26,27 @@ public class RoundManagerScript : MonoBehaviour
     private int _player2Position;
     private int _player3Position;
     private int _player4Position;
+    private List<InputDevice> inputDevices;
 
     void Start()
     {
+        inputDevices = LobbyInputManager.instance.playersInputDevices;
+        numberOfPlayer = inputDevices.Count;
+        Debug.Log(numberOfPlayer);
         SpawnedPlayers = new GameObject[numberOfPlayer];
         InitializingRound();
+    }
+
+    public void collectingPlayer (GameObject player, int playerIndex)
+    {
+        SpawnedPlayers[playerIndex] = player;
     }
 
     private void InitializingRound()
     {
         for (int i = 0; i < numberOfPlayer; i++)
         {
-            /*InputDevice inputdevice = new InputDevice();
-            playerSpawnManager.AddPlayer(inputdevice);*/
-
-            SpawnedPlayers[i] = (Instantiate(playerPrefab));
-            SpawnedPlayers[i].transform.position = spawnPoints[i].position;
+            playerSpawnManager.AddPlayer(inputDevices[i]);
         }
     }
 
@@ -106,6 +111,7 @@ public class RoundManagerScript : MonoBehaviour
 
         for (int i = 0; i< SpawnedPlayers.Length; i++)
         {
+            Debug.Log(SpawnedPlayers.Length);
             Destroy(SpawnedPlayers[i]);
         }
 

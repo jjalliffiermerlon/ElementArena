@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerSpawnManager : MonoBehaviour
 {
     public Transform[] spawnLocations;
-
+    [SerializeField] RoundManagerScript RoundManagerScript;
     private PlayerInputManager playerInputManager;
 
     //Initialisation des champs
@@ -27,5 +27,7 @@ public class PlayerSpawnManager : MonoBehaviour
 
         //Set start position of the new player
         newPlayer.gameObject.GetComponent<Player>().spawnPosition = spawnLocations[newPlayer.playerIndex].position;
+
+        RoundManagerScript.collectingPlayer(newPlayer.gameObject, newPlayer.playerIndex);
     }
 }

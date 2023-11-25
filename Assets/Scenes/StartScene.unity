@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -644,7 +644,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winningScore: 0
-  state: 0
 --- !u!1001 &233523791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1340,6 +1339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 704626025}
   - component: {fileID: 704626026}
+  - component: {fileID: 704626027}
   m_Layer: 5
   m_Name: LobbyPlayer
   m_TagString: Untagged
@@ -1393,9 +1393,21 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: fe3d8f9d-a9e4-4692-9a74-a3705ae22ced
+  m_DefaultActionMap: LobbyInput
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &704626027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704626024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4485b729f6a2ca45aa0de35ec05a82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &713771911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,6 +1483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 723306715}
   - component: {fileID: 723306716}
+  - component: {fileID: 723306717}
   m_Layer: 5
   m_Name: InputManager
   m_TagString: Untagged
@@ -1531,7 +1544,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 0}
+  m_PlayerPrefab: {fileID: 3633874062144056101, guid: 2ca3202576fa36046a581a5794ecb591, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -1541,6 +1554,18 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &723306717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723306714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39c88d6ad795174ead31ec7ae2b3034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &736885000
 GameObject:
   m_ObjectHideFlags: 0
