@@ -54,14 +54,14 @@ public class ElementManager : MonoBehaviour
     //Instantiate a new element and update fields
     private void CreateUtilElement(GameObject utilElementPrefab)
     {
-        utilElementGO = Instantiate(utilElementPrefab);
+        utilElementGO = Instantiate(utilElementPrefab,transform);
         utilElementGO.transform.parent = gameObject.transform;
         utilElement = utilElementGO.GetComponent<UtilElement>();
         utilElementUseLeft = utilElement.getUseCount();
     }
     private void CreateAttackElement(GameObject attackElementPrefab)
     {
-        attackElementGO = Instantiate(attackElementPrefab);
+        attackElementGO = Instantiate(attackElementPrefab,transform);
         attackElementGO.transform.parent = gameObject.transform;
         attackElement = attackElementGO.GetComponent<AttackElement>();
         attackElementUseLeft = attackElement.getUseCount();
