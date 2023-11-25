@@ -11,8 +11,8 @@ public class WindElementScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerElementManager = collision.gameObject.GetComponent<ElementManager>();
-            //playerElementManager.GetNewUtilElement(windDashPrefab);
-            Debug.Log("Element ramassé");
+            playerElementManager.GetNewUtilElement(windDashPrefab);
+            Debug.Log("Element ramassï¿½");
             Destroy(this.gameObject);
         }
     }
