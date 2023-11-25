@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(("StartScene"));
                 break;
             case GameState.Arena:
-                SceneManager.LoadScene("ArenaScene");
+                SceneManager.LoadScene("ArenaScene2");
                 break;
             case GameState.PlayerSelection:
                 GameObject.Find("Canvas").transform.GetChild(0).GameObject().SetActive(false);
