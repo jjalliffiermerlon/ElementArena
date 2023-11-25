@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     public void Move(Vector2 movement)
     {
-        
+        rg.velocity = movement * speed;
     }
 
     public void AttackElement()
