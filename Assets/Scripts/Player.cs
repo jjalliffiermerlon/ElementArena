@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log(movement);
         transform.Rotate(0f, 0f, Vector2.SignedAngle(transform.up, movement));
-        rg.velocity = movement * speed;
+        rg.velocity = movement * speed * Time.fixedDeltaTime;
         
     }
 

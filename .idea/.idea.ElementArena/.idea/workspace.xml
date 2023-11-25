@@ -12,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ElementArena/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ElementArena/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestInputPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestInputPlayer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestInputPlayer.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestInputPlayer.prefab.meta" afterDir="false" />
@@ -34,7 +33,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ScoreTest.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ScoreTest.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/testPlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/testPlayer.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackElement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs.meta" afterDir="false" />
