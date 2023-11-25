@@ -177,6 +177,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  rg: {fileID: 0}
+  playerOrientation: {x: 0, y: 0}
+  Sprites:
+  - {fileID: 21300000, guid: e71b97c00bb9c614184dacb9032ae682, type: 3}
+  - {fileID: 21300000, guid: 283cfd1448354994d9ed431f7775086a, type: 3}
+  - {fileID: 21300000, guid: 42bd32dacb7a2224093310b45dae3cf2, type: 3}
+  - {fileID: 21300000, guid: b0c91c7a670f36c4ba9f2894e94552a8, type: 3}
+  - {fileID: 21300000, guid: a53e987768c984c408787b40a590e117, type: 3}
+  - {fileID: 21300000, guid: 57d7a2a518bb1354eb7951e345a59ed2, type: 3}
+  - {fileID: 21300000, guid: 61511b03f572de547ad67a42ed74aba2, type: 3}
+  - {fileID: 21300000, guid: cb2b7f1418ec555418036f8fe52971ec, type: 3}
+  - {fileID: 21300000, guid: 738faa6f4132be4418c7aed802d5851b, type: 3}
+  - {fileID: 21300000, guid: ef488fbab84d9f949a6c72796a2a5baf, type: 3}
+  - {fileID: 21300000, guid: b1d87e6da198b6548b5bc095bb914023, type: 3}
+  - {fileID: 21300000, guid: cb03403fdd95be64e8f10ddc74c50e63, type: 3}
+  spriteRenderer: {fileID: 8108368169871895509}
+  numberSpriteCharacter: 2
   playerID: 0
   spawnPosition: {x: 0, y: 0}
 --- !u!114 &237368295410885443
@@ -271,3 +288,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   utilElementGO: {fileID: 0}
   attackElementGO: {fileID: 0}
+  comboElementGO: {fileID: 0}

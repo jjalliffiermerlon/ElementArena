@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     public Rigidbody2D rg;
     private ElementManager elementManager;
     public Vector2 playerOrientation;
+    [SerializeField] Sprite[] Sprites;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] int numberSpriteCharacter;
 
     //Numéro du ce joueur
     public int playerID;
@@ -24,6 +27,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         transform.position = spawnPosition;
+        spriteRenderer.sprite = Sprites[0 + (3 * numberSpriteCharacter)];
     }
 
     // Déplace le joueur
@@ -33,6 +37,27 @@ public class Player : MonoBehaviour
         if (movement != Vector2.zero)
         {
             playerOrientation = rg.velocity.normalized;
+        }
+
+        if (playerOrientation == Vector2.up)
+        {
+            spriteRenderer.sprite = Sprites[2 +(3 * numberSpriteCharacter)];
+            spriteRenderer.flipX = false;
+        }
+        else if (playerOrientation == Vector2.down)
+        {
+            spriteRenderer.sprite = Sprites[0+(3 * numberSpriteCharacter)];
+            spriteRenderer.flipX = false;
+        }
+        else if (playerOrientation == Vector2.left)
+        {
+            spriteRenderer.sprite = Sprites[1 + (3 * numberSpriteCharacter)];
+            spriteRenderer.flipX = true;
+        }
+        else if (playerOrientation == Vector2.right)
+        {
+            spriteRenderer.sprite = Sprites[1 + (3 * numberSpriteCharacter)];
+            spriteRenderer.flipX = false;
         }
     }
     // lance le Coup de poing
