@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour
         player.AttackElement();
     }
 
+    public void OnComboElement()
+    {
+        //player.CombotElement();
+    }
+
 
     private void Start()
     {

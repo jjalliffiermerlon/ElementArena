@@ -12,6 +12,10 @@ public class ElementManager : MonoBehaviour
     private AttackElement attackElement;
     private int attackElementUseLeft = 0;
 
+    [SerializeField]
+    private GameObject comboElementGO;
+    private ComboElement comboElement;
+
     //Use the element and reduce 1 use (Remove the element if useleft = 0)
     public void UseUtileElement()
     {
@@ -25,6 +29,25 @@ public class ElementManager : MonoBehaviour
         attackElement.Use();
         attackElementUseLeft -= 1;
         if(attackElementUseLeft <= 0) { RemoveAttackElement(); }
+    }
+
+    public void UseComboElement()
+    {
+        comboElement.Use();
+        attackElementUseLeft -= 1;
+        utilElementUseLeft -= 1;
+        bool removeCombo = false;
+        if(attackElementUseLeft <= 0)
+        {
+            RemoveAttackElement();
+            removeCombo = true;
+        }
+        if(utilElementUseLeft <= 0)
+        {
+            RemoveUtilElement();
+            removeCombo = true;
+        }
+        if(removeCombo) { RemoveComboElement(); }
     }
 
     //Accesseurs
@@ -50,6 +73,10 @@ public class ElementManager : MonoBehaviour
     {
         if (attackElement == null) { RemoveAttackElement(); }
         CreateAttackElement(attackElementPrefab);
+    }
+    public void UpdateComboElement()
+    {
+        //A coder
     }
 
     /*-----------------------------------------Private Methods, nothing to see----------------------------------------*/
@@ -82,6 +109,12 @@ public class ElementManager : MonoBehaviour
         attackElement = null;
         utilElementUseLeft = 0;
         Destroy(attackElementGO);
+    }
+
+    private void RemoveComboElement()
+    {
+        comboElement = null;
+        Destroy(comboElementGO);
     }
     
 }
