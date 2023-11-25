@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 216963214225069601}
+  - component: {fileID: -7414866916970042037}
   m_Layer: 0
   m_Name: windDashPrefab
   m_TagString: Untagged
@@ -31,3 +32,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7414866916970042037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663956523926065292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb7f272033b4714ebf6417bf235cbed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanDash: 1
+  IsDashing: 0
+  DashTime: 0.2
+  DashForce: 1
+  DashCooldown: 0.5
+  countUseMax: 3
