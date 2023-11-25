@@ -11,7 +11,7 @@ public class FireElementScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerElementManager = collision.gameObject.GetComponent<ElementManager>();
-            //playerElementManager.GetNewAttackElement(fireballPrefab);
+            playerElementManager.GetNewAttackElement(fireballPrefab);
             Debug.Log("Element ramassé");
             Destroy(this.gameObject);
         }

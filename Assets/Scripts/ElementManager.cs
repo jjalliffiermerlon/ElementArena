@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class ElementManager : MonoBehaviour
 {
+    [SerializeField]
     private GameObject utilElementGO;
     private UtilElement utilElement;
     private int utilElementUseLeft = 0;
 
+    [SerializeField]
     private GameObject attackElementGO;
     private AttackElement attackElement;
     private int attackElementUseLeft = 0;

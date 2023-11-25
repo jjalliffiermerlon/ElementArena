@@ -6,11 +6,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed = 10f;
     
     private Rigidbody2D rg;
+    private ElementManager elementManager;
 
     // Prépare le rigidbody
     void Start()
     {
         rg = gameObject.GetComponent<Rigidbody2D>();
+        elementManager = gameObject.GetComponent<ElementManager>();
     }
 
     // Déplace le joueur
@@ -30,7 +32,10 @@ public class Player : MonoBehaviour
     //lance l'élément offensif
     public void AttackElement()
     {
-        
+        if (elementManager.GetAttackElement() != null)
+        {
+            elementManager.UseAttackElement();
+        }
     }
     
     // lance l'élément utilitaire
