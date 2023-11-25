@@ -12,16 +12,13 @@ public class Player : MonoBehaviour
     {
         rg = gameObject.GetComponent<Rigidbody2D>();
     }
-    
+
     // Déplace le joueur
     public void Move(Vector2 movement)
     {
-        Debug.Log(movement);
-        transform.Rotate(0f, 0f, Vector2.SignedAngle(transform.up, movement));
         rg.velocity = movement * speed * Time.fixedDeltaTime;
-        
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, movement);
     }
-
     // lance le Coup de poing
     void Punch()
     {
