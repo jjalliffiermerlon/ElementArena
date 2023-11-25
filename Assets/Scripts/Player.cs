@@ -1,0 +1,37 @@
+
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+    [SerializeField] private float speed = 10f;
+    private Rigidbody2D rg;
+
+    void Start()
+    {
+        rg = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    public void Move(Vector2 movement)
+    {
+        rg.velocity = movement * speed;
+    }
+
+    public void AttackElement()
+    {
+        
+    }
+
+    public void UtilElement()
+    {
+        
+    }
+    void Update()
+    {
+       
+    }
+
+    void FixedUpdate()
+    {
+      
+    }
+}
