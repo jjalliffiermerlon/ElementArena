@@ -5,8 +5,9 @@ public class Player : MonoBehaviour
     // Variable modifiable sur Unity
     [SerializeField] private float speed = 10f;
     
-    private Rigidbody2D rg;
+    public Rigidbody2D rg;
     private ElementManager elementManager;
+    public Quaternion playerOrientation;
 
     //Numéro du ce joueur
     public int playerID;
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
         rg.velocity = movement * speed * Time.fixedDeltaTime;
         if (movement != Vector2.zero)
         {
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, movement);
+            playerOrientation = Quaternion.LookRotation(Vector3.forward, movement);
         }
     }
     // lance le Coup de poing
