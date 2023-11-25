@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed = 10f;
     private Rigidbody2D rg;
 
-    void start()
+    void Start()
     {
         rg = gameObject.GetComponent<Rigidbody2D>();
     }
