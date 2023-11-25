@@ -12,18 +12,17 @@ public class PlayerController : MonoBehaviour
 
 
     //UnityEvent Methods
-    public void OnMove(InputAction.CallbackContext context)
+    public void OnMovement(InputValue value)
     {
-        movementInput = context.ReadValue<Vector2>();
-        player.Move(movementInput);
+        movementInput = value.Get<Vector2>();
     }
 
-    public void OnUtilElement(InputAction.CallbackContext context)
+    public void OnUtilElement()
     {
         player.UtilElement();
     }
 
-    public void OnAttackElement(InputAction.CallbackContext context)
+    public void OnAttackElement()
     {
         player.AttackElement();
     }
@@ -33,5 +32,9 @@ public class PlayerController : MonoBehaviour
     {
         player = gameObject.GetComponent<Player>();
     }
-    
+
+    private void FixedUpdate()
+    {
+        player.Move(movementInput);
+    }
 }
