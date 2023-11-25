@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a9e6bc5b67e0b4cbd38e7af396cb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireballSpeed: 5
+  fireballSpeed: 0.5
   countUseMax: 3
   fireball: {fileID: 5848964072681282795, guid: 1801b394024a19842a67c99a685cc6e2, type: 3}
