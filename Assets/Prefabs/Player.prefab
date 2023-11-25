@@ -270,7 +270,7 @@ MonoBehaviour:
     m_ActionId: 96a28b9c-5a45-4000-891e-b18e752e66aa
     m_ActionName: Player/AttackElement[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
