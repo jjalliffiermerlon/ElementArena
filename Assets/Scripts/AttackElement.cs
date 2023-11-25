@@ -5,4 +5,6 @@ using UnityEngine;
 public interface AttackElement
 {
     public void Use();
+
+    public int getUseCount();
 }
