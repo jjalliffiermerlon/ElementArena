@@ -74,6 +74,10 @@ public class GameManager : MonoBehaviour
     public void BackToMenu()
     {
         UpdateGameState(GameState.MainMenu);
+        Player1Ready = false;
+        Player2Ready = false;
+        Player3Ready = false;
+        Player4Ready = false;
     }
     public void ScoreUpdate()
     {
