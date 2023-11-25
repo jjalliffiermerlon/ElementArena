@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,39 +16,39 @@ public class GameManager : MonoBehaviour
     public static bool Player2Ready;
     public static bool Player3Ready;
     public static bool Player4Ready;
-
+    
     private void Awake()
     {
         Instance = this;
-    }
-
-    private void Start()
-    {
-        UpdateGameState(GameState.MainMenu);
     }
     private void Update()
     {
         if (Player1Ready && Player2Ready && Player3Ready && Player4Ready)
         {
             UpdateGameState(GameState.Arena);
+            Player1Ready = false;
+            Player2Ready = false;
+            Player3Ready = false;
+            Player4Ready = false;
         }
     }
 
     public GameState state;
 
-    public void UpdateGameState(GameState newState)
+    private void UpdateGameState(GameState newState)
     {
         state = newState;
         switch (state)
         {
             case GameState.MainMenu: //requires updating the scenes names and adding them to the unity build
-                SceneManager.LoadScene(("MainMenu"));
+                SceneManager.LoadScene(("StartScene"));
                 break;
             case GameState.Arena:
-                SceneManager.LoadScene("ArenaScene");
+                SceneManager.LoadScene("ArenaScene2");
                 break;
             case GameState.PlayerSelection:
-                SceneManager.LoadScene("Playerselection");
+                GameObject.Find("Canvas").transform.GetChild(0).GameObject().SetActive(false);
+                GameObject.Find("Canvas").transform.GetChild(1).GameObject().SetActive(true);
                 break;
             case GameState.Credits:
                 SceneManager.LoadScene(("Credits"));
@@ -73,6 +74,10 @@ public class GameManager : MonoBehaviour
     public void BackToMenu()
     {
         UpdateGameState(GameState.MainMenu);
+        Player1Ready = false;
+        Player2Ready = false;
+        Player3Ready = false;
+        Player4Ready = false;
     }
     public void ScoreUpdate()
     {
@@ -81,6 +86,27 @@ public class GameManager : MonoBehaviour
     public void FinalScreen()
     {
         UpdateGameState(GameState.FinalScreen);
+    }
+    public void QuitGame()
+    {
+        Debug.Log("Closing the game");
+        Application.Quit();
+    }
+    public void Player1Check()
+    {
+        Player1Ready = !Player1Ready;
+    }
+    public void Player2Check()
+    {
+        Player2Ready = !Player2Ready;
+    }
+    public void Player3Check()
+    {
+        Player3Ready = !Player3Ready;
+    }
+    public void Player4Check()
+    {
+        Player4Ready = !Player4Ready;
     }
     public enum GameState
     {
