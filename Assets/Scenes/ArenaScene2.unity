@@ -800,6 +800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac278cd58b4b0f4cbed7e72def2a523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreToWin: 3
   playerPrefab: {fileID: 3633874062144056101, guid: 2ca3202576fa36046a581a5794ecb591, type: 3}
   spawnPoints:
   - {fileID: 265872580}
@@ -808,6 +809,11 @@ MonoBehaviour:
   - {fileID: 1269009764}
   numberOfPlayer: 4
   scoreScreen: {fileID: 0}
+  playerSpawnManager: {fileID: 0}
+  ScorePlayer1: 0
+  ScorePlayer2: 0
+  ScorePlayer3: 0
+  ScorePlayer4: 0
 --- !u!4 &1237983065
 Transform:
   m_ObjectHideFlags: 0
