@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class RoundManagerScript : MonoBehaviour
 {
-    [SerializeField] private int ScoreToWin;
+    [SerializeField] int ScoreToWin;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform[] spawnPoints;
     public int numberOfPlayer = 2;
@@ -26,6 +26,7 @@ public class RoundManagerScript : MonoBehaviour
     private int _player2Position;
     private int _player3Position;
     private int _player4Position;
+    private string scorestr;
 
     void Start()
     {
@@ -89,6 +90,7 @@ public class RoundManagerScript : MonoBehaviour
             _player3Position = 0;
             _player4Position = 0;
             _deadPlayerNb = 0;
+            scorestr = $"Scores :\n Joueur 1 : {ScorePlayer1} points\n Joueur 2 : {ScorePlayer2} points\n Joueur {3} : {ScorePlayer3} points\n Joueur 4 : {ScorePlayer4} points";
             StartCoroutine(roundFinished());
         }
         if (Math.Max(Math.Max(ScorePlayer1, ScorePlayer2), Math.Max(ScorePlayer3, ScorePlayer4)) >= ScoreToWin)
