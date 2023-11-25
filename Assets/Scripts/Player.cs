@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     
     public Rigidbody2D rg;
     private ElementManager elementManager;
-    public Quaternion playerOrientation;
+    public Vector2 playerOrientation;
 
     //Numéro du ce joueur
     public int playerID;
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         rg.velocity = movement * speed * Time.fixedDeltaTime;
         if (movement != Vector2.zero)
         {
-            playerOrientation = Quaternion.LookRotation(Vector3.forward, movement);
+            playerOrientation = rg.velocity.normalized;
         }
     }
     // lance le Coup de poing
@@ -58,6 +58,14 @@ public class Player : MonoBehaviour
     // gère la mort du joueur
     public void Die()
     {
+        if (RoundManagerScript.LastDeadPlayer == -1)
+        {
+            RoundManagerScript.LastDeadPlayer = playerID;
+        }
+        else
+        {
+            RoundManagerScript.OtherDeadPlayer = playerID;
+        }
         Destroy(gameObject);
     }
     

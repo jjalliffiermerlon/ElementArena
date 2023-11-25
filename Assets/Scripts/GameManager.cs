@@ -33,9 +33,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public GameState state;
+    public static GameState state;
 
-    private void UpdateGameState(GameState newState)
+    private static void UpdateGameState(GameState newState)
     {
         state = newState;
         switch (state)
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateGameState(GameState.ScoreUpdate);
     }
-    public void FinalScreen()
+    public static void FinalScreen()
     {
         UpdateGameState(GameState.FinalScreen);
     }
