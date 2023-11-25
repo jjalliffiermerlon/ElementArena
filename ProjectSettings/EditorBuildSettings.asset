@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ArenaScene.unity
     guid: 15b03a312deb88b48899ffe8a7fa113e
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 6169390cf8b264c84af4f46136c1ad49
   - enabled: 0
     path: Assets/Scenes/TestMainMenu.unity
     guid: 040413fb457564504ae074ab2d3b1986
