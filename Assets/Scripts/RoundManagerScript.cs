@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class RoundManagerScript : MonoBehaviour
@@ -10,6 +11,7 @@ public class RoundManagerScript : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     public int numberOfPlayer = 2;
     [SerializeField] private GameObject scoreScreen;
+    [SerializeField] private PlayerSpawnManager playerSpawnManager;
     private GameObject[] SpawnedPlayers;
 
     void Start()
@@ -22,6 +24,9 @@ public class RoundManagerScript : MonoBehaviour
     {
         for (int i = 0; i < numberOfPlayer; i++)
         {
+            /*InputDevice inputdevice = new InputDevice();
+            playerSpawnManager.AddPlayer(inputdevice);*/
+
             SpawnedPlayers[i] = (Instantiate(playerPrefab));
             SpawnedPlayers[i].transform.position = spawnPoints[i].position;
         }
