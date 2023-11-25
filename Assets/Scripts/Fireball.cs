@@ -17,8 +17,10 @@ public class Fireball : MonoBehaviour, AttackElement
     {
         Debug.Log("I cast FIREBALL!!!");
         Transform dep = gameObject.transform;
-        GameObject ball =Instantiate(fireball, dep);
-        transform.LookAt(dep);
+        GameObject ball =Instantiate(fireball);
+        ball.transform.position = dep.position;
+        ball.transform.rotation = dep.rotation;
+        ball.transform.Translate(0,0.25f,0);
         ball.GetComponent<Rigidbody2D>().velocity = dep.TransformDirection(fireballSpeed * Vector2.up );
 
     }
