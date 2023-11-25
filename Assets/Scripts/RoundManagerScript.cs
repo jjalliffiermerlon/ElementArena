@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoundManagerScript : MonoBehaviour
 {
@@ -8,14 +10,20 @@ public class RoundManagerScript : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     public int numberOfPlayer = 2;
     [SerializeField] private GameObject scoreScreen;
+    private GameObject[] SpawnedPlayers;
 
     void Start()
     {
+        SpawnedPlayers = new GameObject[numberOfPlayer];
+        InitializingRound();
+    }
+
+    private void InitializingRound()
+    {
         for (int i = 0; i < numberOfPlayer; i++)
         {
-            GameObject spawnedPlayer;
-            spawnedPlayer = Instantiate(playerPrefab);
-            spawnedPlayer.transform.position = spawnPoints[i].position;
+            SpawnedPlayers[i] = (Instantiate(playerPrefab));
+            SpawnedPlayers[i].transform.position = spawnPoints[i].position;
         }
     }
 
@@ -23,12 +31,22 @@ public class RoundManagerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            roundFinished();
+            StartCoroutine(roundFinished());
         }
     }
 
-    private void roundFinished()
+    IEnumerator roundFinished()
     {
+        Time.timeScale = 0;
         scoreScreen.SetActive(true);
+        yield return new WaitForSecondsRealtime(10);
+        scoreScreen.SetActive(false);
+
+        for (int i = 0; i< SpawnedPlayers.Length; i++)
+        {
+            Destroy(SpawnedPlayers[i]);
+        }
+
+        InitializingRound();
     }
 }
