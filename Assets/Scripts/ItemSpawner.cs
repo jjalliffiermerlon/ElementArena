@@ -9,16 +9,14 @@ public class ItemSpawner : MonoBehaviour
     public static int ItemType;
     private float _spawnWait;
     private float _elapsedTime;
-    private BoxCollider2D _bc;
-    private SpriteRenderer _sp;
     private bool _isEnabled;
+    [SerializeField] GameObject[] elementPrefabs;
+    private GameObject elementSpawned;
 
     private void Start()
     {
-        _bc = GetComponent<BoxCollider2D>();
-        _sp = GetComponent<SpriteRenderer>();
         _spawnWait = Random.Range(minSpawnTimeInSec, maxSpawnTimeInSec);
-        ItemType = Random.Range(0, numberOfItemTypes + 1);
+        ItemType = Random.Range(0, elementPrefabs.Length);
     }
 
     void Update()
@@ -30,20 +28,13 @@ public class ItemSpawner : MonoBehaviour
 
         if (_elapsedTime >= _spawnWait)
         {
-            _bc.enabled = true;
-            _sp.enabled = true;
+            Destroy(elementSpawned);
+            elementSpawned = Instantiate(elementPrefabs[ItemType]);
+            elementSpawned.transform.position = gameObject.transform.position;
+
             _elapsedTime = 0;
             _spawnWait = Random.Range(minSpawnTimeInSec, maxSpawnTimeInSec);
-            ItemType = Random.Range(0, numberOfItemTypes + 1);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Player"))
-        {
-            _bc.enabled = false;
-            _sp.enabled = false;
+            ItemType = Random.Range(0, elementPrefabs.Length);
         }
     }
 }
