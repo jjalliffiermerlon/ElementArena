@@ -55,7 +55,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackElement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComboElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComboElement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs.meta" afterDir="false" />
@@ -312,7 +311,7 @@
       <workItem from="1700930828823" duration="8103000" />
       <workItem from="1700942094699" duration="17000" />
       <workItem from="1700942234858" duration="70000" />
-      <workItem from="1700942481478" duration="3699000" />
+      <workItem from="1700942481478" duration="5043000" />
     </task>
     <servers />
   </component>
