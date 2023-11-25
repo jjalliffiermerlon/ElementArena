@@ -18,7 +18,7 @@ public class ElementManager : MonoBehaviour
 
     //Use the element and reduce 1 use (Remove the element if useleft = 0)
     public void UseUtileElement()
-    {
+    {  
         utilElement.Use();
         utilElementUseLeft -= 1;
         if (utilElementUseLeft <= 0) { RemoveUtilElement(); }
