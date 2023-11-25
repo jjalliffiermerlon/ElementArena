@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent (typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
     //Variable fields
@@ -9,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private float playerSpeed = 2.0f;
 
     //Component fields
-    private CharacterController controller;
+    private Player player;
 
 
     //Input Fields
@@ -40,21 +39,7 @@ public class PlayerController : MonoBehaviour
     
     private void Start()
     {
-        controller = gameObject.GetComponent<CharacterController>();
+        player = gameObject.GetComponent<Player>();
     }
-
-    void Update()
-    {
-
-        Vector2 move = new Vector2(movementInput.x, movementInput.y);
-        controller.Move(move * Time.deltaTime * playerSpeed);
-
-        if (move != Vector2.zero)
-        {
-            gameObject.transform.forward = move;
-        }
-
-        if(utilElement) { Debug.Log("UtilElement trigger"); }
-        if(attackElement) { Debug.Log("AttackElement trigger"); }
-    }
+    
 }
