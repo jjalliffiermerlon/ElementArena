@@ -8,11 +8,21 @@ public class Player : MonoBehaviour
     private Rigidbody2D rg;
     private ElementManager elementManager;
 
+    //Numéro du ce joueur
+    public int playerID;
+    //Position du spawn du joueur
+    public Vector2 spawnPosition;
+
     // Prépare le rigidbody
-    void Start()
+    void Awake()
     {
         rg = gameObject.GetComponent<Rigidbody2D>();
         elementManager = gameObject.GetComponent<ElementManager>();
+    }
+
+    private void Start()
+    {
+        transform.position = spawnPosition;
     }
 
     // Déplace le joueur
