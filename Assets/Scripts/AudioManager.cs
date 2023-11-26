@@ -195,12 +195,12 @@ public class AudioManager : MonoBehaviour
         elementSpawnedSource.Play();
     }
 
-    //--------------------------------------------------------------------------------------------------------
+    //-------------------------------------------------------------------------------------------------------------
     private void Awake()
     {
         if (AudioManagerInstance != null && AudioManagerInstance != this)
         {
-            Destroy(this );
+            Destroy(this);
             return;
         }
         AudioManagerInstance = this;
