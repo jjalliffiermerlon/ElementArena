@@ -27,23 +27,31 @@ public class RoundManagerScript : MonoBehaviour
     private int _player3Position;
     private int _player4Position;
     private string scorestr;
+    private List<InputDevice> devicesInput;
 
     void Start()
     {
+        devicesInput = InputTransferScript.inputDevices;
+        numberOfPlayer = devicesInput.Count;
         SpawnedPlayers = new GameObject[numberOfPlayer];
-        InitializingRound();
+        StartCoroutine(InitializingRound());
     }
 
-    private void InitializingRound()
+    IEnumerator InitializingRound()
     {
         for (int i = 0; i < numberOfPlayer; i++)
         {
-            /*InputDevice inputdevice = new InputDevice();
-            playerSpawnManager.AddPlayer(inputdevice);*/
-
-            SpawnedPlayers[i] = (Instantiate(playerPrefab));
-            SpawnedPlayers[i].transform.position = spawnPoints[i].position;
+            playerSpawnManager.AddPlayer(devicesInput[i], i);
         }
+        yield return new WaitForSeconds(2);
+        playerSpawnManager.startGame();
+        yield return new WaitForSeconds(0.5f);
+        playerSpawnManager.playerInputManager.DisableJoining();
+    }
+
+    public void CollectingPlayers(GameObject player, int playerIndex)
+    {
+        SpawnedPlayers[playerIndex] = player;
     }
 
     private void Update()
