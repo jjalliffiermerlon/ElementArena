@@ -26,11 +26,13 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.Instance.playMusic("Menu");
     }
+
     private void Update()
     {
         _nbConnectedPlayers = InputTransferScript.inputDevices.Count;
         if (Player1Ready && Player2Ready && (Player3Ready||_nbConnectedPlayers < 3) && (Player4Ready||_nbConnectedPlayers < 4))
         {
+            AudioManager.Instance.playMenuSound("Start");
             UpdateGameState(GameState.Arena);
             Player1Ready = false;
             Player2Ready = false;
@@ -48,7 +50,6 @@ public class GameManager : MonoBehaviour
         {
             case GameState.MainMenu: //requires updating the scenes names and adding them to the unity build
                 SceneManager.LoadScene(("StartScene"));
-                AudioManager.Instance.playMusic("Menu");
                 break;
             case GameState.Arena:
                 SceneManager.LoadScene("ArenaScene");
@@ -74,14 +75,17 @@ public class GameManager : MonoBehaviour
     //Call one of the next methods to load a scene
     public void StartSelection()
     {
+        AudioManager.Instance.playMenuSound("Choice");
         UpdateGameState(GameState.PlayerSelection);
     }
     public void DisplayCredits()
     {
+        AudioManager.Instance.playMenuSound("Sound");
         UpdateGameState(GameState.Credits);
     }
     public void BackToMenu()
     {
+        AudioManager.Instance.playMenuSound("Cancel");
         UpdateGameState(GameState.MainMenu);
         Player1Ready = false;
         Player2Ready = false;
@@ -98,23 +102,28 @@ public class GameManager : MonoBehaviour
     }
     public void QuitGame()
     {
+        AudioManager.Instance.playMenuSound("Cancel");
         Debug.Log("Closing the game");
         Application.Quit();
     }
     public void Player1Check()
     {
+        AudioManager.Instance.playMenuSound("Sound");
         Player1Ready = !Player1Ready;
     }
     public void Player2Check()
     {
+        AudioManager.Instance.playMenuSound("Sound");
         Player2Ready = !Player2Ready;
     }
     public void Player3Check()
     {
+        AudioManager.Instance.playMenuSound("Sound");
         Player3Ready = !Player3Ready;
     }
     public void Player4Check()
     {
+        AudioManager.Instance.playMenuSound("Sound");
         Player4Ready = !Player4Ready;
     }
     public enum GameState
