@@ -78,12 +78,14 @@ public class ElementManager : MonoBehaviour
     public void GetNewUtilElement(GameObject utilElementPrefab)
     {
         if(utilElement != null) { RemoveUtilElement(); }
+        AudioManager.Instance.playElementPickedUp();
         CreateUtilElement(utilElementPrefab);
     }
 
     public void GetNewAttackElement(GameObject attackElementPrefab)
     {
         if (attackElement != null) { RemoveAttackElement(); }
+        AudioManager.Instance.playElementPickedUp();
         CreateAttackElement(attackElementPrefab);
     }
     public void UpdateComboElement()

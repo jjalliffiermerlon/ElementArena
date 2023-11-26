@@ -31,6 +31,7 @@ public class ItemSpawner : MonoBehaviour
             Destroy(elementSpawned);
             elementSpawned = Instantiate(elementPrefabs[ItemType]);
             elementSpawned.transform.position = gameObject.transform.position;
+            AudioManager.Instance.playElementSpawned();
 
             _elapsedTime = 0;
             _spawnWait = Random.Range(minSpawnTimeInSec, maxSpawnTimeInSec);

@@ -22,7 +22,7 @@ public class LobbyInputManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }*/
 
-    //Ajoute petit à petit les input des joueurs à la liste
+    //Ajoute petit ï¿½ petit les input des joueurs ï¿½ la liste
     void OnPlayerJoined(PlayerInput newPlayer)
     {
         InputDevice newPlayerDevice = newPlayer.devices[0];
@@ -50,6 +50,7 @@ public class LobbyInputManager : MonoBehaviour
             playerSelection[3].SetActive(true);
             playerSelection[3].SetActive(true);
         }*/
+        AudioManager.Instance.playMenuSound("Join");
     }
 
     public void Start()

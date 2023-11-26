@@ -46,6 +46,8 @@ public class RoundManagerScript : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(2);
         playerSpawnManager.startGame();
+        AudioManager.Instance.playRoundManagerSound("Count");
+        AudioManager.Instance.playRoundManagerSound("Go");
     }
 
     private void Update()
