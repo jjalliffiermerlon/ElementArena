@@ -73,7 +73,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e552c9508370b0d429c3c5bf8230e673, type: 3}
   startGameClip: {fileID: 8300000, guid: 8a2380707996e8a4294caea9e0358b59, type: 3}
   CounterClip: {fileID: 8300000, guid: 9c690333a8943ad43b3024e2e71bd6a5, type: 3}
-  goClip: {fileID: 0}
+  goClip: {fileID: 8300000, guid: 85e5d4e1f0078cd4096afc1a7befca97, type: 3}
   playAreaReduceAlertClip: {fileID: 0}
   deathSource: {fileID: 1146222122117255535}
   punchHitSource: {fileID: 3863223523239222427}
