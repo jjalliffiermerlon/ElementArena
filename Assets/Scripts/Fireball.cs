@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour, AttackElement
 {
+    [SerializeField] private bool canCast = true;
+    [SerializeField] private float castcouldown = 2f;
     [SerializeField] private float fireballSpeed = 15f;
     [SerializeField] private int countUseMax = 3;
     public GameObject fireball;
     private Player playerScript;
+    
 
     public void Start()
     {
@@ -18,18 +21,26 @@ public class Fireball : MonoBehaviour, AttackElement
     public int getUseCount() //not used
     {
         return countUseMax;
-    } 
+    }
 
+    IEnumerator cast()
+    {
+        canCast = false;
+        yield return new WaitForSeconds(castcouldown);
+        canCast = true;
+    }
     public void Use()
     {
         Debug.Log("I cast FIREBALL!!!");
+        if (canCast){Transform dep = gameObject.transform;
+            StartCoroutine(cast());
+            GameObject ball =Instantiate(fireball);
+            ball.transform.position = dep.position;
+            ball.transform.rotation = dep.rotation;
+            ball.transform.Translate(playerScript.playerOrientation * 0.25f);
+            ball.GetComponent<Rigidbody2D>().velocity = dep.TransformDirection(fireballSpeed * playerScript.playerOrientation );
+        }
         
-        Transform dep = gameObject.transform;
-        GameObject ball =Instantiate(fireball);
-        ball.transform.position = dep.position;
-        ball.transform.rotation = dep.rotation;
-        ball.transform.Translate(playerScript.playerOrientation * 0.25f);
-        ball.GetComponent<Rigidbody2D>().velocity = dep.TransformDirection(fireballSpeed * playerScript.playerOrientation );
-
+        
     }
 }

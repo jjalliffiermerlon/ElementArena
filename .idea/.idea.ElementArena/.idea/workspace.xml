@@ -65,6 +65,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireElementScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireElementScript.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
@@ -72,7 +73,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemSpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemSpawner.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LobbyInputManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyInputManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LobbyPlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyPlayer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions.meta" afterDir="false" />
