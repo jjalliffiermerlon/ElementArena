@@ -58,7 +58,7 @@ public class AudioManager : MonoBehaviour
         if(kind == "Play")
         {
             musicSource.Stop();
-            int random = Random.Range(0,playModeMusicsClips.Length-1);
+            int random = Random.Range(0,playModeMusicsClips.Length);
             musicSource.clip = playModeMusicsClips[random];
             musicSource.Play();
 
@@ -101,7 +101,7 @@ public class AudioManager : MonoBehaviour
         }else if(kind == "Join")
         {
             menuSource.Stop();
-            int random = Random.Range(0, playerJoinClips.Length - 1);
+            int random = Random.Range(0, playerJoinClips.Length);
             menuSource.clip = playerJoinClips[random];
             musicSource.Play();
             Debug.Log("Hey!");

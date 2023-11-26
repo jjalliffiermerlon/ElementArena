@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     }
     public void DisplayCredits()
     {
-        AudioManager.Instance.playMenuSound("Sound");
+        AudioManager.Instance.playMenuSound("Choice");
         UpdateGameState(GameState.Credits);
     }
     public void BackToMenu()
@@ -108,22 +108,22 @@ public class GameManager : MonoBehaviour
     }
     public void Player1Check()
     {
-        AudioManager.Instance.playMenuSound("Sound");
+        AudioManager.Instance.playMenuSound("Choice");
         Player1Ready = !Player1Ready;
     }
     public void Player2Check()
     {
-        AudioManager.Instance.playMenuSound("Sound");
+        AudioManager.Instance.playMenuSound("Choice");
         Player2Ready = !Player2Ready;
     }
     public void Player3Check()
     {
-        AudioManager.Instance.playMenuSound("Sound");
+        AudioManager.Instance.playMenuSound("Choice");
         Player3Ready = !Player3Ready;
     }
     public void Player4Check()
     {
-        AudioManager.Instance.playMenuSound("Sound");
+        AudioManager.Instance.playMenuSound("Choice");
         Player4Ready = !Player4Ready;
     }
     public enum GameState
