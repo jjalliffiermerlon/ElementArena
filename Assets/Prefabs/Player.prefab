@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5238593811094174637}
   - component: {fileID: 237368295410885443}
   - component: {fileID: 2513356970570608788}
+  - component: {fileID: 2472498848367932194}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -182,7 +183,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   playerOrientation: {x: 0, y: 0}
   Sprites:
-  - {fileID: 21300000, guid: e71b97c00bb9c614184dacb9032ae682, type: 3}
+  - {fileID: 448357799, guid: 1758bd7918cc726479e5f0a9b1c98492, type: 3}
   - {fileID: 21300000, guid: 283cfd1448354994d9ed431f7775086a, type: 3}
   - {fileID: 21300000, guid: 42bd32dacb7a2224093310b45dae3cf2, type: 3}
   - {fileID: 21300000, guid: b0c91c7a670f36c4ba9f2894e94552a8, type: 3}
@@ -195,7 +196,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b1d87e6da198b6548b5bc095bb914023, type: 3}
   - {fileID: 21300000, guid: cb03403fdd95be64e8f10ddc74c50e63, type: 3}
   spriteRenderer: {fileID: 8108368169871895509}
-  numberSpriteCharacter: 2
+  numberSpriteCharacter: 0
   DashTime: 0.2
   DashForce: 2
   DashCooldown: 0.5
@@ -294,3 +295,24 @@ MonoBehaviour:
   utilElementGO: {fileID: 0}
   attackElementGO: {fileID: 0}
   comboElementGO: {fileID: 0}
+--- !u!95 &2472498848367932194
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3633874062144056101}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61b883eddc6c03d46b521981fc6e8a20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
