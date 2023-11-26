@@ -22,10 +22,10 @@ public class RoundManagerScript : MonoBehaviour
     public static int LastDeadPlayer = -1;//takes the Id of a player that just died
     public static int OtherDeadPlayer = -1;//failsafe in case 2 players die at the same frame
     private int _deadPlayerNb;
-    private int _player1Position;
-    private int _player2Position;
-    private int _player3Position;
-    private int _player4Position;
+    private int _player1Position = 1;
+    private int _player2Position = 1;
+    private int _player3Position = 1;
+    private int _player4Position = 1;
     private string scorestr;
     private List<InputDevice> devicesInput;
 
@@ -87,16 +87,20 @@ public class RoundManagerScript : MonoBehaviour
             OtherDeadPlayer = -1;
         }
 
-        if (_deadPlayerNb >= 3)
+        if (_deadPlayerNb >= numberOfPlayer - 1)
         {
             ScorePlayer1 += 6 - _player1Position;
             ScorePlayer2 += 6 - _player2Position;
             ScorePlayer3 += 6 - _player3Position;
             ScorePlayer4 += 6 - _player4Position;
-            _player1Position = 0;
-            _player2Position = 0;
-            _player3Position = 0;
-            _player4Position = 0;
+            ScoresStoring.ScorePlayer1 = ScorePlayer1;
+            ScoresStoring.ScorePlayer2 = ScorePlayer2;
+            ScoresStoring.ScorePlayer3 = ScorePlayer3;
+            ScoresStoring.ScorePlayer4 = ScorePlayer4;
+            _player1Position = 1;
+            _player2Position = 1;
+            _player3Position = 1;
+            _player4Position = 1;
             _deadPlayerNb = 0;
             scorestr = $"Scores :\n Joueur 1 : {ScorePlayer1} points\n Joueur 2 : {ScorePlayer2} points\n Joueur {3} : {ScorePlayer3} points\n Joueur 4 : {ScorePlayer4} points";
             StartCoroutine(roundFinished());
