@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] playModeMusicsClips;
     [SerializeField] private AudioClip menuMusicClip;
     [SerializeField] private AudioClip pauseMusicClip;
+    [SerializeField] private AudioClip endGameMusicClip;
 
     //------UI Sound------
     [SerializeField] private AudioSource menuSource;
@@ -20,6 +21,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip menuChoiceClip;
     [SerializeField] private AudioClip menuCancelClip;
     [SerializeField] private AudioClip[] playerJoinClips;
+    [SerializeField] private AudioClip startGameClip;
 
     //------Round Manager Sound------
     [SerializeField] private AudioClip CounterClip;
@@ -51,7 +53,7 @@ public class AudioManager : MonoBehaviour
 
     //------------------------------------------------------Methods------------------------------------------------------
     //------Musics------
-    public void playMusic(string kind)//Play -> Play Music, Menu-> Main menu Music, Pause -> Pause Music
+    public void playMusic(string kind)//Play -> Play Music, Menu-> Main menu Music, Pause -> Pause Music, End-> End of the game
     {
         if(kind == "Play")
         {
@@ -71,11 +73,16 @@ public class AudioManager : MonoBehaviour
             musicSource.Stop();
             musicSource.clip = pauseMusicClip;
             musicSource.Play();
+        }else if(kind == "End")
+        {
+            musicSource.Stop();
+            musicSource.clip = endGameMusicClip;
+            musicSource.Play();
         }
     }
 
     //------UISounds------
-    public void playMenuSound(string kind)//Move,Choice,Cancel,Join
+    public void playMenuSound(string kind)//Move,Choice,Cancel,Join, Start
     {
         if(kind == "Move")
         {
@@ -96,6 +103,11 @@ public class AudioManager : MonoBehaviour
             menuSource.Stop();
             int random = Random.Range(0, playerJoinClips.Length - 1);
             menuSource.clip = playerJoinClips[random];
+            musicSource.Play();
+        }else if(kind == "Start")
+        {
+            menuSource.Stop();
+            menuSource.clip = startGameClip;
             musicSource.Play();
         }
     }
