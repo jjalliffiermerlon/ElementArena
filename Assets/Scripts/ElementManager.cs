@@ -77,13 +77,13 @@ public class ElementManager : MonoBehaviour
     //Methods calls when a new element is get
     public void GetNewUtilElement(GameObject utilElementPrefab)
     {
-        if(utilElement == null) { RemoveUtilElement(); }
+        if(utilElement != null) { RemoveUtilElement(); }
         CreateUtilElement(utilElementPrefab);
     }
 
     public void GetNewAttackElement(GameObject attackElementPrefab)
     {
-        if (attackElement == null) { RemoveAttackElement(); }
+        if (attackElement != null) { RemoveAttackElement(); }
         CreateAttackElement(attackElementPrefab);
     }
     public void UpdateComboElement()
