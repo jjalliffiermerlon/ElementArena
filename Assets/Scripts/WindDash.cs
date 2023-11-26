@@ -21,6 +21,7 @@ public class WindDash : MonoBehaviour, UtilElement
 
     public IEnumerator Dash()
     {
+        AudioManager.Instance.playWindDash();
         playerScript.canDash = false;
         playerScript.isDashing = true;
         playerScript.rb.velocity = playerScript.playerOrientation * playerScript.DashForce;
