@@ -43,9 +43,11 @@ public class GameManager : MonoBehaviour
         {
             case GameState.MainMenu: //requires updating the scenes names and adding them to the unity build
                 SceneManager.LoadScene(("StartScene"));
+                AudioManager.Instance.playMusic("Menu");
                 break;
             case GameState.Arena:
                 SceneManager.LoadScene("ArenaScene");
+                AudioManager.Instance.playMusic("Play");
                 break;
             case GameState.PlayerSelection:
                 GameObject.Find("Canvas").transform.GetChild(0).GameObject().SetActive(false);
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.FinalScreen:
                 SceneManager.LoadScene(("Finalscreen"));
+                AudioManager.Instance.playMusic("End");
                 break;
             case GameState.ScoreUpdate:
                 SceneManager.LoadScene("ScoreUpdate");
