@@ -14,7 +14,7 @@ public class RoundManagerScript : MonoBehaviour
     public int numberOfPlayer = 2;
     [SerializeField] private GameObject scoreScreen;
     [SerializeField] private PlayerSpawnManager playerSpawnManager;
-    private GameObject[] SpawnedPlayers;
+    public GameObject[] SpawnedPlayers;
     public int ScorePlayer1;
     public int ScorePlayer2;
     public int ScorePlayer3;
@@ -43,15 +43,8 @@ public class RoundManagerScript : MonoBehaviour
         {
             playerSpawnManager.AddPlayer(devicesInput[i], i);
         }
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSecondsRealtime(2);
         playerSpawnManager.startGame();
-        yield return new WaitForSeconds(0.5f);
-        playerSpawnManager.playerInputManager.DisableJoining();
-    }
-
-    public void CollectingPlayers(GameObject player, int playerIndex)
-    {
-        SpawnedPlayers[playerIndex] = player;
     }
 
     private void Update()
@@ -123,16 +116,16 @@ public class RoundManagerScript : MonoBehaviour
 
     IEnumerator roundFinished()
     {
+        StopCoroutine(InitializingRound());
         Time.timeScale = 0;
         scoreScreen.SetActive(true);
-        yield return new WaitForSecondsRealtime(10);
-        scoreScreen.SetActive(false);
-
-        for (int i = 0; i< SpawnedPlayers.Length; i++)
+        for (int i = 0; i < SpawnedPlayers.Length; i++)
         {
             Destroy(SpawnedPlayers[i]);
         }
-
-        InitializingRound();
+        yield return new WaitForSecondsRealtime(10);
+        scoreScreen.SetActive(false);
+        Time.timeScale = 1;
+        StartCoroutine(InitializingRound());
     }
 }

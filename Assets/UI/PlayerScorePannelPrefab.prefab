@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1683356486784311880}
   - component: {fileID: 4251031362421348190}
   - component: {fileID: 4205754429723988223}
+  - component: {fileID: 3120772065664713577}
   m_Layer: 5
   m_Name: PlayerScorePannelPrefab
   m_TagString: Untagged
@@ -76,6 +77,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3120772065664713577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292161145492427714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec0c8061d38be448a0fca76e76abd5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 2566090033678886848}
 --- !u!1 &2566090033678886848
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +102,7 @@ GameObject:
   - component: {fileID: 199143895930376302}
   - component: {fileID: 5228132188774552916}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

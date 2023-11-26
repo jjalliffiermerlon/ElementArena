@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1002,7 +1002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1481545872888629690, guid: 4d99b478a32645c46a28072c3428acac, type: 3}
       propertyPath: ScoreToWin
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1481545872888629690, guid: 4d99b478a32645c46a28072c3428acac, type: 3}
       propertyPath: scoreScreen
@@ -3487,7 +3487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7efcd8129689f8f4d9c0ff8532968cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundManager: {fileID: 0}
+  roundManager: {fileID: 1129831104}
   playerScorePannelPrefab: {fileID: 292161145492427714, guid: f3227394d22d7774aa16e9cb7392cac0, type: 3}
 --- !u!1 &1603135264
 GameObject:
