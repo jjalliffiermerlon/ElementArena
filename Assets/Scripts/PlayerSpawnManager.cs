@@ -25,14 +25,12 @@ public class PlayerSpawnManager : MonoBehaviour
     
     public void startGame()
     {
-        Debug.Log("c'est start game");
         var list = FindObjectsByType<PlayerInput>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach(var player in list)
         {
             player.gameObject.transform.position = spawnLocations[player.playerIndex].position;
 
             player.gameObject.GetComponent<Player>().playerID = player.playerIndex;
-            Debug.Log(player.playerIndex);
             RoundManagerScript.SpawnedPlayers[player.playerIndex] = player.gameObject;
         }
     }

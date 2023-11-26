@@ -1013,6 +1013,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1481545872888629690, guid: 4d99b478a32645c46a28072c3428acac, type: 3}
+      propertyPath: scoreLayoutGroup
+      value: 
+      objectReference: {fileID: 1569710035}
+    - target: {fileID: 1481545872888629690, guid: 4d99b478a32645c46a28072c3428acac, type: 3}
       propertyPath: playerSpawnManager
       value: 
       objectReference: {fileID: 1129831102}

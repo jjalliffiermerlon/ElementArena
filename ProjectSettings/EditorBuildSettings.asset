@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ArenaTest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ArenaDesignTest.unity
+    guid: fa059b3cab30f4fdc926d5848d77d003
   m_configObjects: {}

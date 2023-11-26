@@ -10,7 +10,7 @@ public class AnimationChar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pAnimator = GetComponent<Animator>;
+        //pAnimator = GetComponent<Animator>;
         
     }
 

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -42,6 +43,33 @@ public class ScoreLayoutGroupScript : MonoBehaviour
 
             scoreTextObject.GetComponent<TextMeshProUGUI>().text = texscore;
         }
+    }
 
+    public void updatingScore()
+    {
+        foreach (GameObject pannel in scorePannel)
+        {
+            GameObject scoreTextObject = pannel.GetComponent<playerscorepannelprefabscript>().scoreText;
+            string texscore = "ouais";
+
+            if (pannel == scorePannel[0])
+            {
+                texscore = ScoresStoring.ScorePlayer1.ToString();
+            }
+            else if (pannel == scorePannel[1])
+            {
+                texscore = ScoresStoring.ScorePlayer2.ToString();
+            }
+            else if (pannel == scorePannel[2])
+            {
+                texscore = ScoresStoring.ScorePlayer3.ToString();
+            }
+            else if (pannel == scorePannel[3])
+            {
+                texscore = ScoresStoring.ScorePlayer4.ToString();
+            }
+
+            scoreTextObject.GetComponent<TextMeshProUGUI>().text = texscore;
+        }
     }
 }

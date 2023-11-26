@@ -13,6 +13,7 @@ public class RoundManagerScript : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     public int numberOfPlayer = 2;
     [SerializeField] private GameObject scoreScreen;
+    [SerializeField] private ScoreLayoutGroupScript scoreLayoutGroup;
     [SerializeField] private PlayerSpawnManager playerSpawnManager;
     public GameObject[] SpawnedPlayers;
     public int ScorePlayer1;
@@ -119,6 +120,7 @@ public class RoundManagerScript : MonoBehaviour
         StopCoroutine(InitializingRound());
         Time.timeScale = 0;
         scoreScreen.SetActive(true);
+        scoreLayoutGroup.updatingScore();
         for (int i = 0; i < SpawnedPlayers.Length; i++)
         {
             Destroy(SpawnedPlayers[i]);
