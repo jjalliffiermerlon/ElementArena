@@ -13,13 +13,13 @@ public class PlayerSpawnManager : MonoBehaviour
         playerInputManager = GetComponent<PlayerInputManager>();
     }
 
-    //Methode appelé par le RoundManager pour spawn les joueurs
+    //Methode appelï¿½ par le RoundManager pour spawn les joueurs
     public void AddPlayer(InputDevice inputDevice)
     {
         playerInputManager.JoinPlayer(-1, -1, null, inputDevice);
     }
 
-    //Methode lancée quand un joueur rejoint la partie
+    //Methode lancï¿½e quand un joueur rejoint la partie
     void OnPlayerJoined(PlayerInput newPlayer)
     {
         //SetPlayer ID of the new player
@@ -28,6 +28,6 @@ public class PlayerSpawnManager : MonoBehaviour
         //Set start position of the new player
         newPlayer.gameObject.GetComponent<Player>().spawnPosition = spawnLocations[newPlayer.playerIndex].position;
 
-        RoundManagerScript.collectingPlayer(newPlayer.gameObject, newPlayer.playerIndex);
+        //RoundManagerScript.collectingPlayer(newPlayer.gameObject, newPlayer.playerIndex);
     }
 }
