@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
+
+    private void Start()
+    {
+        AudioManager.Instance.playMusic("Menu");
+    }
     private void Update()
     {
         _nbConnectedPlayers = InputTransferScript.inputDevices.Count;
