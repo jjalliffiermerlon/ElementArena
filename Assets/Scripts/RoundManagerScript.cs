@@ -89,10 +89,20 @@ public class RoundManagerScript : MonoBehaviour
 
         if (_deadPlayerNb >= numberOfPlayer - 1)
         {
-            ScorePlayer1 += 6 - _player1Position;
-            ScorePlayer2 += 6 - _player2Position;
-            ScorePlayer3 += 6 - _player3Position;
-            ScorePlayer4 += 6 - _player4Position;
+            ScorePlayer1 += numberOfPlayer - _player1Position + 1;
+            ScorePlayer2 += numberOfPlayer - _player2Position + 1;
+            ScorePlayer3 += numberOfPlayer - _player3Position + 1;
+            ScorePlayer4 += numberOfPlayer - _player4Position + 1;
+            switch (numberOfPlayer)
+            {
+                case 2:
+                    ScorePlayer3 = 0;
+                    ScorePlayer4 = 0;
+                    break;
+                case 3:
+                    ScorePlayer4 = 0;
+                    break;
+            }
             ScoresStoring.ScorePlayer1 = ScorePlayer1;
             ScoresStoring.ScorePlayer2 = ScorePlayer2;
             ScoresStoring.ScorePlayer3 = ScorePlayer3;
