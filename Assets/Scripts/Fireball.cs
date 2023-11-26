@@ -34,6 +34,7 @@ public class Fireball : MonoBehaviour, AttackElement
         Debug.Log("I cast FIREBALL!!!");
         if (canCast){Transform dep = gameObject.transform;
             StartCoroutine(cast());
+            AudioManager.Instance.playFireballLaunch();
             GameObject ball =Instantiate(fireball);
             ball.transform.position = dep.position;
             ball.transform.rotation = dep.rotation;
