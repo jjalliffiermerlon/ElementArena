@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ElementFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ElementFire.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ElementFire.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ElementFire.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ElementWind.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ElementWind.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ElementWind.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ElementWind.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballElement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballElement.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireballProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireballProjectile.prefab" afterDir="false" />
@@ -47,6 +48,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ArenaTest.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ArenaTest.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Credits.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FinalScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FinalScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FinalScreen.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FinalScreen.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/InputManagerTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InputManagerTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/InputManagerTest.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InputManagerTest.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ScoreTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ScoreTest.unity" afterDir="false" />
@@ -57,10 +60,12 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackElement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComboElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComboElement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ElementManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireElementScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireElementScript.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
@@ -71,9 +76,12 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerSpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerSpawnManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerSpawnManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerSpawnManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoundManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoundManagerScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoundManagerScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoundManagerScript.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreDisplay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreDisplay.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreLayoutGroupScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreLayoutGroupScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreLayoutGroupScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreLayoutGroupScript.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UICanvasScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UICanvasScript.cs" afterDir="false" />
@@ -103,6 +111,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_back.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_face.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_face.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_side.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/rabbit/rabbit_full_side.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/wind.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/wind.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
@@ -228,6 +237,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/30adf90198bc4c4b83910c6fb1877998174000/9e/4cbdc808/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FIreballBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Fireball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -243,27 +253,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "elements-1.2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;elements-1.2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Ethan\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Ethan\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\Ethan\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Ethan\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Ethan\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Ethan\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Unity.exe" />
@@ -314,7 +324,8 @@
       <workItem from="1700930828823" duration="8103000" />
       <workItem from="1700942094699" duration="17000" />
       <workItem from="1700942234858" duration="70000" />
-      <workItem from="1700942481478" duration="6793000" />
+      <workItem from="1700942481478" duration="6986000" />
+      <workItem from="1700987399219" duration="2818000" />
     </task>
     <servers />
   </component>

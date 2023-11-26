@@ -1,18 +1,24 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
     // Variable modifiable sur Unity
-    public bool CanDash = true;
-    public bool IsDashing;
+    [FormerlySerializedAs("CanDash")] public bool canDash = true;
+    [FormerlySerializedAs("IsDashing")] public bool isDashing;
     [SerializeField] private float speed = 10f;
     
-    public Rigidbody2D rg;
+    [FormerlySerializedAs("rg")] public Rigidbody2D rb;
     private ElementManager elementManager;
     public Vector2 playerOrientation;
     [SerializeField] Sprite[] Sprites;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] int numberSpriteCharacter;
+    [SerializeField] public float DashTime = 0.2f;
+    [SerializeField] public float DashForce = 15f;
+
+    [SerializeField] public float DashCooldown = 0.5f;
 
     //Numéro du ce joueur
     public int playerID;
@@ -22,7 +28,7 @@ public class Player : MonoBehaviour
     // Prépare le rigidbody
     void Awake()
     {
-        rg = gameObject.GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
         elementManager = gameObject.GetComponent<ElementManager>();
     }
 
@@ -35,14 +41,14 @@ public class Player : MonoBehaviour
     // Déplace le joueur
     public void Move(Vector2 movement)
     {
-        if (IsDashing) // si on dash, on bouge pas
+        if (isDashing) // si on dash, on bouge pas
         {
             return;
         }
-        rg.velocity = movement * speed * Time.fixedDeltaTime;
+        rb.velocity = movement * speed * Time.fixedDeltaTime;
         if (movement != Vector2.zero)
         {
-            playerOrientation = rg.velocity.normalized;
+            playerOrientation = rb.velocity.normalized;
         }
 
         if (playerOrientation == Vector2.up)
@@ -74,7 +80,7 @@ public class Player : MonoBehaviour
     //lance l'élément offensif
     public void AttackElement()
     {
-        if (IsDashing)
+        if (isDashing)
         {
             return;
         }
@@ -84,12 +90,13 @@ public class Player : MonoBehaviour
     // lance l'élément utilitaire
     public void UtilElement()
     {
-        if (IsDashing)
+        if (isDashing)
         {
             return;
         }
         elementManager.UseUtileElement();
     }
+    
     
     // gère la mort du joueur
     public void Die()
@@ -104,10 +111,22 @@ public class Player : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    IEnumerator Dashending()
+    {
+       yield return new WaitForSeconds(DashTime);
+       isDashing = false;
+       yield return new WaitForSeconds(DashCooldown);
+       canDash = true;
+
+    }
     
     void Update()
     {
-       
+        if (isDashing)
+        {
+            StartCoroutine(Dashending());
+        }
     }
     
 }

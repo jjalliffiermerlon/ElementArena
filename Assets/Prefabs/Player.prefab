@@ -176,8 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c952cd95b0ce5e74ebad42a1092ff643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDash: 1
+  isDashing: 0
   speed: 100
-  rg: {fileID: 0}
+  rb: {fileID: 0}
   playerOrientation: {x: 0, y: 0}
   Sprites:
   - {fileID: 21300000, guid: e71b97c00bb9c614184dacb9032ae682, type: 3}
@@ -194,6 +196,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cb03403fdd95be64e8f10ddc74c50e63, type: 3}
   spriteRenderer: {fileID: 8108368169871895509}
   numberSpriteCharacter: 2
+  DashTime: 0.2
+  DashForce: 2
+  DashCooldown: 0.5
   playerID: 0
   spawnPosition: {x: 0, y: 0}
 --- !u!114 &237368295410885443

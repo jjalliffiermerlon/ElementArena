@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class WindDash : MonoBehaviour, UtilElement
 {
-    [SerializeField] private float DashTime = 0.2f;
-    [SerializeField] private float DashForce = 15f;
-
-    [SerializeField] private float DashCooldown = 0.5f;
+    
     [SerializeField] private int countUseMax = 3;
 
     private Player playerScript;
@@ -22,20 +19,22 @@ public class WindDash : MonoBehaviour, UtilElement
         return countUseMax;
     }
 
-    private IEnumerator Dash()
+    public IEnumerator Dash()
     {
-        playerScript.CanDash = false;
-        playerScript.IsDashing = true;
-        playerScript.rg.velocity = playerScript.playerOrientation * DashForce;
-        yield return new WaitForSeconds(DashTime);
-        playerScript.IsDashing = false;
-        yield return new WaitForSeconds(DashCooldown);
-        playerScript.CanDash = true;
+        playerScript.canDash = false;
+        playerScript.isDashing = true;
+        playerScript.rb.velocity = playerScript.playerOrientation * playerScript.DashForce;
+        yield return new WaitForSeconds(playerScript.DashTime);
+        playerScript.isDashing = false;
+        Debug.Log("j'ai fini de dash dash");
+        yield return new WaitForSeconds(playerScript.DashCooldown);
+        playerScript.canDash = true;
+        Debug.Log("je peux dash");
     }
     public void Use()
     {
         Debug.Log("Je dash wind wind");
-        if (playerScript.CanDash)
+        if (playerScript.canDash)
         {
             StartCoroutine(Dash());
         }

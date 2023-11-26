@@ -12,10 +12,10 @@ public class ScoreDisplay : MonoBehaviour
 
     private void Start()
     {
-        _scoreP1 = GameManager.ScorePlayer1;
-        _scoreP2 = GameManager.ScorePlayer2;
-        _scoreP3 = GameManager.ScorePlayer3;
-        _scoreP4 = GameManager.ScorePlayer4;
+        _scoreP1 = ScoresStoring.ScorePlayer1;
+        _scoreP2 = ScoresStoring.ScorePlayer2;
+        _scoreP3 = ScoresStoring.ScorePlayer3;
+        _scoreP4 = ScoresStoring.ScorePlayer4;
         score.text = $"Scores Finaux :\n Joueur 1 : {_scoreP1} points\n Joueur 2 : {_scoreP2} points\n Joueur {3} : {_scoreP3} points\n Joueur 4 : {_scoreP4} points";
     }
 }

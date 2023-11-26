@@ -29,7 +29,7 @@ public class ElementManager : MonoBehaviour
             }
         }
     }
-
+    
     public void UseAttackElement()
     {
         if (utilElement != null)
@@ -119,7 +119,7 @@ public class ElementManager : MonoBehaviour
 
     private void RemoveAttackElement() { 
         attackElement = null;
-        utilElementUseLeft = 0;
+        attackElementUseLeft = 0;
         Destroy(attackElementGO);
     }
 
