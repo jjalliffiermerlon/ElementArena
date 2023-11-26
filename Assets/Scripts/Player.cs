@@ -109,6 +109,7 @@ public class Player : MonoBehaviour
         {
             RoundManagerScript.OtherDeadPlayer = playerID;
         }
+        AudioManager.Instance.playDeathSound();
         Destroy(gameObject);
     }
 
