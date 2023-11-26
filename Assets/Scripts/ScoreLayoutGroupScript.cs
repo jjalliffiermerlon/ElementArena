@@ -22,26 +22,33 @@ public class ScoreLayoutGroupScript : MonoBehaviour
         foreach (GameObject pannel in scorePannel)
         {
             GameObject scoreTextObject = pannel.GetComponent<playerscorepannelprefabscript>().scoreText;
-            string texscore="ouais";
+            string texscore = "ouais";
+            GameObject numberplayerText = pannel.GetComponent<playerscorepannelprefabscript>().playerNumberText;
+            string texPlayerNumber = "pou";
 
             if (pannel == scorePannel[0])
             {
                 texscore = ScoresStoring.ScorePlayer1.ToString();
+                texPlayerNumber = "Joueur.euse 1";
             }
             else if (pannel == scorePannel[1])
             {
                 texscore = ScoresStoring.ScorePlayer2.ToString();
+                texPlayerNumber = "Joueur.euse 2";
             }
             else if (pannel == scorePannel[2])
             {
                 texscore = ScoresStoring.ScorePlayer3.ToString();
+                texPlayerNumber = "Joueur.euse 3";
             }
             else if (pannel == scorePannel[3])
             {
                 texscore = ScoresStoring.ScorePlayer4.ToString();
+                texPlayerNumber = "Joueur.euse 4";
             }
 
             scoreTextObject.GetComponent<TextMeshProUGUI>().text = texscore;
+            numberplayerText.GetComponent<TextMeshProUGUI>().text = texPlayerNumber;
         }
     }
 

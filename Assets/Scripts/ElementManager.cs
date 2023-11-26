@@ -32,7 +32,7 @@ public class ElementManager : MonoBehaviour
     
     public void UseAttackElement()
     {
-        if (utilElement != null)
+        if (attackElement != null)
         {
             attackElement.Use();
             attackElementUseLeft -= 1;

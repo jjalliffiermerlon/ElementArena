@@ -33,8 +33,6 @@ public class Fireball : MonoBehaviour, AttackElement
     public void Use()
     {
         Debug.Log("I cast FIREBALL!!!");
-        if (canCast){
-            StartCoroutine(cast());
             isCasting = true;
             Transform dep = gameObject.transform;
             AudioManager.Instance.playFireballLaunch();
@@ -44,7 +42,6 @@ public class Fireball : MonoBehaviour, AttackElement
             ball.transform.Translate(playerScript.playerOrientation * 0.25f);
             ball.GetComponent<Rigidbody2D>().velocity = dep.TransformDirection(fireballSpeed * playerScript.playerOrientation );
             isCasting = false;
-        }
         
         
     }

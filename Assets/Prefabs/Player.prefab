@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: e71b97c00bb9c614184dacb9032ae682, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8108368169871895509}
   numberSpriteCharacter: 0
   DashTime: 0.2
-  DashForce: 2
+  DashForce: 5
   DashCooldown: 0.5
   playerID: 0
   spawnPosition: {x: 0, y: 0}

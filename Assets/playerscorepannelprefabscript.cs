@@ -5,4 +5,5 @@ using UnityEngine;
 public class playerscorepannelprefabscript : MonoBehaviour
 {
     [SerializeField] public GameObject scoreText;
+    [SerializeField] public GameObject playerNumberText;
 }
