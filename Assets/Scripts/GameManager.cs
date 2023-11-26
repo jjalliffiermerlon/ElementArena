@@ -5,7 +5,6 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int winningScore;
     public static GameManager Instance;
     public static event Action<GameState> OnGameStateChange;
     public static int ScorePlayer1; //idk if the scores will be useful in this script, they currently aren't
@@ -16,6 +15,7 @@ public class GameManager : MonoBehaviour
     public static bool Player2Ready;
     public static bool Player3Ready;
     public static bool Player4Ready;
+    private int _nbConnectedPlayers;
     
     private void Awake()
     {
@@ -23,7 +23,8 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Player1Ready && Player2Ready && Player3Ready && Player4Ready)
+        _nbConnectedPlayers = InputTransferScript.inputDevices.Count;
+        if (Player1Ready && Player2Ready && (Player3Ready||_nbConnectedPlayers < 3) && (Player4Ready||_nbConnectedPlayers < 4))
         {
             UpdateGameState(GameState.Arena);
             Player1Ready = false;
