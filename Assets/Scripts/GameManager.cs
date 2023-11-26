@@ -29,9 +29,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        _nbConnectedPlayers = InputTransferScript.inputDevices.Count;
+        
         if (Player1Ready && Player2Ready && (Player3Ready||_nbConnectedPlayers < 3) && (Player4Ready||_nbConnectedPlayers < 4))
         {
+            _nbConnectedPlayers = InputTransferScript.inputDevices.Count;
             AudioManager.Instance.playMenuSound("Start");
             UpdateGameState(GameState.Arena);
             Player1Ready = false;

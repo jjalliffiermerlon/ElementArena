@@ -40,13 +40,13 @@ public class RoundManagerScript : MonoBehaviour
 
     IEnumerator InitializingRound()
     {
+        AudioManager.Instance.playRoundManagerSound("Count");
         for (int i = 0; i < numberOfPlayer; i++)
         {
             playerSpawnManager.AddPlayer(devicesInput[i], i);
         }
         yield return new WaitForSecondsRealtime(2);
         playerSpawnManager.startGame();
-        AudioManager.Instance.playRoundManagerSound("Count");
         AudioManager.Instance.playRoundManagerSound("Go");
     }
 
