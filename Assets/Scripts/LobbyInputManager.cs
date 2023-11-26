@@ -26,6 +26,7 @@ public class LobbyInputManager : MonoBehaviour
     {
         InputDevice newPlayerDevice = newPlayer.devices[0];
         playersInputDevices.Add(newPlayerDevice);
+        AudioManager.Instance.playMenuSound("Join");
     }
 
     public void Start()

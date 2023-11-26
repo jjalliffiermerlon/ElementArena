@@ -16,7 +16,7 @@ public class FIreballbehavior : MonoBehaviour
         //{
         //other.GetComponent<Crate>().BreakCrate  
         //}
-
+        AudioManager.Instance.playFireballHit();
         Destroy(gameObject);
     }
 }
